@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="14" height="6" tilewidth="46" tileheight="54">
+ <tileset firstgid="1" name="bk1" tilewidth="46" tileheight="54">
+  <image source="bk1.jpg" width="678" height="331"/>
+ </tileset>
+ <layer name="block" width="14" height="6">
+  <data encoding="base64" compression="zlib">
+   eJwNw4lSQQEAAMAXEZWEpKjooEShkhJdEkmS+v9vaXdml4IgCBl22YhRV4wZd9U11024YdJNU6bNuGXWbXPuuGvegnvue2DRkoceeeyJZSueembVc2vWvfDShk1bXnntjW1v7XjnvV0f7Nn30SefffHVgW8OfXfk2A8nfjr1y5nfzv1x4a9//gNAug3z
+  </data>
+ </layer>
+ <objectgroup name="road" width="14" height="6" visible="0">
+  <object x="473" y="96"/>
+  <object x="23" y="93"/>
+  <object x="474" y="148"/>
+  <object x="24" y="142"/>
+  <object x="473" y="205"/>
+  <object x="25" y="201"/>
+  <object x="472" y="251"/>
+  <object x="24" y="250"/>
+  <object x="474" y="306"/>
+  <object x="23" y="303"/>
+ </objectgroup>
+ <objectgroup name="tower01" width="14" height="6" visible="0">
+  <object x="84" y="94"/>
+  <object x="128" y="94"/>
+  <object x="171" y="94"/>
+  <object x="215" y="94"/>
+  <object x="257" y="94"/>
+  <object x="302" y="94"/>
+  <object x="346" y="94"/>
+  <object x="387" y="94"/>
+  <object x="433" y="94"/>
+ </objectgroup>
+ <objectgroup name="tower02" width="14" height="6" visible="0">
+  <object x="84" y="147"/>
+  <object x="128" y="147"/>
+  <object x="171" y="147"/>
+  <object x="215" y="147"/>
+  <object x="257" y="147"/>
+  <object x="302" y="147"/>
+  <object x="346" y="147"/>
+  <object x="387" y="147"/>
+  <object x="433" y="147"/>
+ </objectgroup>
+ <objectgroup name="tower03" width="14" height="6" visible="0">
+  <object x="84" y="203"/>
+  <object x="128" y="203"/>
+  <object x="171" y="203"/>
+  <object x="215" y="203"/>
+  <object x="257" y="203"/>
+  <object x="302" y="203"/>
+  <object x="346" y="203"/>
+  <object x="387" y="203"/>
+  <object x="433" y="203"/>
+ </objectgroup>
+ <objectgroup name="tower04" width="14" height="6" visible="0">
+  <object x="84" y="247"/>
+  <object x="128" y="247"/>
+  <object x="171" y="247"/>
+  <object x="215" y="247"/>
+  <object x="257" y="247"/>
+  <object x="302" y="247"/>
+  <object x="346" y="247"/>
+  <object x="387" y="247"/>
+  <object x="433" y="247"/>
+ </objectgroup>
+ <objectgroup name="tower05" width="14" height="6">
+  <object x="83" y="304"/>
+  <object x="127" y="304"/>
+  <object x="170" y="304"/>
+  <object x="214" y="304"/>
+  <object x="256" y="304"/>
+  <object x="301" y="304"/>
+  <object x="345" y="304"/>
+  <object x="386" y="304"/>
+  <object x="432" y="304"/>
+ </objectgroup>
+ <objectgroup name="zombies" width="14" height="6" visible="0">
+  <object x="529" y="85"/>
+  <object x="574" y="71"/>
+  <object x="528" y="148"/>
+  <object x="580" y="124"/>
+  <object x="620" y="148"/>
+  <object x="628" y="197"/>
+  <object x="579" y="192"/>
+  <object x="528" y="191"/>
+  <object x="532" y="246"/>
+  <object x="571" y="243"/>
+  <object x="621" y="239"/>
+  <object x="621" y="295"/>
+  <object x="577" y="305"/>
+  <object x="537" y="289"/>
+ </objectgroup>
+</map>
