@@ -8,7 +8,9 @@ import org.cocos2d.opengl.CCGLSurfaceView;
 import com.lxj.layer.WelComeLayer;
 
 import android.os.Bundle;
+import android.os.Process;
 import android.app.Activity;
+import android.view.KeyEvent;
 import android.view.Menu;
 
 public class MainActivity extends Activity {
@@ -47,5 +49,9 @@ public class MainActivity extends Activity {
 		super.onDestroy();
 	}
 	
-
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		Process.killProcess(Process.myPid());
+		return super.onKeyDown(keyCode, event);
+	}
 }

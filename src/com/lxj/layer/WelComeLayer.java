@@ -22,8 +22,8 @@ import org.cocos2d.transitions.CCFadeTransition;
 import org.cocos2d.types.ccColor3B;
 
 
+import com.lxj.base.BaseLayer;
 import com.lxj.tool.CommonUtil;
-import com.lxj.zhiwuvsani.BaseLayer;
 
 import android.os.AsyncTask;
 import android.os.SystemClock;
@@ -50,7 +50,8 @@ public class WelComeLayer extends BaseLayer {
 			@Override
 			protected Void doInBackground(Void... params) {
 				// 耗时操作：访问网络，版本检测，预加载图片，预加载声音文件
-				SystemClock.sleep(5000);
+				
+				SystemClock.sleep(4000);
 				return null;
 			}
 
@@ -69,6 +70,7 @@ public class WelComeLayer extends BaseLayer {
 
 	private void init() {
 		// TODO Auto-generated method stub
+		loadBGM();
 		splash();
 	}
 

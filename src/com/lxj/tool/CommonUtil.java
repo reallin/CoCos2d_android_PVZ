@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import org.cocos2d.actions.base.CCAction;
+import org.cocos2d.actions.base.CCRepeatForever;
 import org.cocos2d.actions.interval.CCAnimate;
 import org.cocos2d.layers.CCLayer;
 import org.cocos2d.layers.CCTMXObjectGroup;
@@ -20,7 +22,6 @@ import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.view.MotionEvent;
-import android.view.animation.Animation;
 
 /**
  * 通用工具
@@ -136,28 +137,29 @@ public class CommonUtil {
 	 * 加载一次序列帧
 	 */
 	public static CCAnimate getAnimation(ArrayList<CCSpriteFrame> frames, int num, String filepath){
-		if(frames == null){
+		if (frames == null) {
 			frames = new ArrayList<CCSpriteFrame>();
-			for(int i = 1;i <= num;i++){
-				CCSprite sprite = CCSprite.sprite(String.format(filepath, num));
-				frames.add(sprite.displayedFrame());
+			// frames信息加载
+			for (int i = 1; i <= num; i++) {
+				frames.add(CCSprite.sprite(String.format(filepath, i)).displayedFrame());
 			}
 		}
-		CCAnimation animation = CCAnimation.animation("", 0.2F, frames);
-		return CCAnimate.action(animation,false);
+		CCAnimation animation = CCAnimation.animation("", 0.2f, frames);
+		return CCAnimate.action(animation, false);// 只播放一次
 	}
 	/**
 	 * 加载循环序列帧
 	 */
-	public static CCAnimate getRepeatAnimation(ArrayList<CCSpriteFrame> frames, int num, String filepath){
-		if(frames == null){
+	public static CCAction getRepeatAnimation(ArrayList<CCSpriteFrame> frames, int num, String filepath){
+		if (frames == null) {
 			frames = new ArrayList<CCSpriteFrame>();
-			for(int i = 0;i < num;i++){
-				CCSprite sprite = CCSprite.sprite(String.format(filepath, num));
-				frames.add(sprite.displayedFrame());
+			for (int i = 1; i <= num; i++) {
+				frames.add(CCSprite.sprite(String.format(filepath, i)).displayedFrame());
 			}
 		}
-		CCAnimation animation = CCAnimation.animation("", 0.2F, frames);
-		return CCAnimate.action(animation);
+		CCAnimation anim = CCAnimation.animation("", 0.2f, frames);
+
+		CCAnimate animate = CCAnimate.action(anim);
+		return CCRepeatForever.action(animate);
 	}
 }
