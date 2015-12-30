@@ -9,7 +9,7 @@ import com.lxj.base.BaseElement;
  */
 public abstract class Plant extends BaseElement {
 
-	protected int life=100;// 生命值
+	protected int life=20;// 生命值
 
 	protected int line;// 行号
 	protected int row;// 列号

@@ -8,7 +8,7 @@ public abstract class DefancePlant extends Plant {
 
 	public DefancePlant(String filepath) {
 		super(filepath);
-		life = 200;
+		life = 100;
 	}
 
 }

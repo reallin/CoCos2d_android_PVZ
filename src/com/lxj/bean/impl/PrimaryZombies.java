@@ -95,6 +95,7 @@ public class PrimaryZombies extends Zombies{
 	public void attacked(int attack) {
 		// TODO Auto-generated method stub
 		life -= attack;
+	
 		if (life <= 0 && !isDie) {
 			isDie = true;
 			// дт╢Э╣Тоб
